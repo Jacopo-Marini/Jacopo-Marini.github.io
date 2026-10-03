@@ -1,0 +1,14 @@
+# Social media links shown under your bio on the homepage.
+# Uncomment a line and fill in the value to make that icon appear.
+# Leave a line commented out to hide that icon.
+
+cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF (upload your CV to assets/pdf/cv.pdf)
+email: # e.g. jmarini@uchicago.edu  — uncomment to show an email icon
+# scholar_userid:   # your Google Scholar ID (the string after "user=" in your Scholar profile URL)
+# orcid_id:         # your ORCID iD, e.g. 0000-0002-1825-0097
+# linkedin_username:
+# github_username:  Jacopo-Marini
+# ssrn_id:          # your SSRN author page id
+# researchgate_profile:
+# x_username:       # (Twitter/X) handle without the @
+rss_icon: false
