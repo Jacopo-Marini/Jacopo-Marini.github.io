@@ -1,21 +1,12 @@
 /* One column, one serif, one accent. Edit the variables to re-theme. */
 
 :root {
-  --accent: #800000;          /* UChicago maroon */
-  --ink: #1b1b1b;
-  --muted: #666360;
-  --rule: #ddd6d1;
-  --paper: #fbfaf8;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --accent: #e08a90;
-    --ink: #e9e5e0;
-    --muted: #a39d97;
-    --rule: #3a3634;
-    --paper: #161413;
-  }
+  color-scheme: light;
+  --accent: #5a0e22;          /* deep bordeaux: links and section labels only */
+  --ink: #000;
+  --muted: #555;
+  --rule: #dcdcdc;
+  --paper: #fff;
 }
 
 * { box-sizing: border-box; }
