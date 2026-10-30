@@ -29,10 +29,10 @@ latest_posts:
   limit: 3
 ---
 
-I am a **Research Professional** at the [University of Chicago Booth School of Business](https://www.chicagobooth.edu/) and the [Stigler Center for the Study of the Economy and the State](https://www.chicagobooth.edu/research/stigler), where I work on [**your research area — fill this in, e.g. empirical corporate finance, institutional investors, and political economy**].
+Ciao 👋
 
-[Write two or three sentences about your research interests and what motivates your work. This is the first thing visitors read, so keep it concrete: what questions do you study, and why do they matter? You can edit all of this text in `_pages/about.md`.]
+I am Jacopo Marini, a **Research Professional** at the [Stigler Center](https://www.chicagobooth.edu/research/stigler) at the [University of Chicago Booth School of Business](https://www.chicagobooth.edu/), working under the supervision of **Luigi Zingales**.
 
-My research studies [**topic**], using [**data / methods, e.g. SEC filings, CRSP, and panel methods**]. Before joining Chicago, I [**degree / prior affiliation**].
+My research interests are centered around **innovation**, using tools from both industrial organization and finance.
 
-You can find my work on the [publications](/publications/) page and my full [CV](/cv/) here. Feel free to reach out by email.
+If you find something that resonates with you, feel free to reach out!
