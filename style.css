@@ -153,14 +153,32 @@ h2 .note {
 
 .paper { margin-bottom: 24px; }
 .paper .title { font-weight: var(--w-strong); line-height: 1.4; text-wrap: balance; }
-.paper .meta { font-style: italic; }
-.paper .line {
-  position: relative;
-  padding-left: 1.6em;
-  font-size: 17px;
-  line-height: 1.55;
+/* co-authors sit on the title line, in regular italic, and never split across lines */
+.paper .meta { font-style: italic; font-weight: var(--w-body); white-space: nowrap; }
+
+/* Abstract dropdown: a small accent-coloured toggle under the title; the text opens beneath it */
+.abstract { margin-top: 4px; font-size: 17px; line-height: 1.55; }
+.abstract summary {
+  display: inline-block;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
 }
-.paper .line::before { content: "\2014"; position: absolute; left: 0; }
+.abstract summary::-webkit-details-marker { display: none; }
+.abstract summary::before {
+  content: "\25B8";
+  display: inline-block;
+  margin-right: 0.4em;
+  transition: transform 0.15s;
+}
+.abstract[open] summary::before { transform: rotate(90deg); }
+.abstract summary:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+.abstract summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.abstract p {
+  margin: 8px 0 0;
+  padding-left: 1.1em;
+  border-left: 1px solid var(--rule);
+}
 
 @media (max-width: 620px) {
   :root { --edge: 14px; }
