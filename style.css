@@ -126,8 +126,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
   border-radius: 2px;
 }
 
-/* Research: left-aligned list under bold subheads */
-.research { max-width: 44rem; }
+/* Research: left-aligned list under bold subheads. The frame is a little wider here so the
+   longest title and its co-author fit on one line (about 865px); on narrow screens it wraps. */
+.page:has(.research) { max-width: 960px; }
 
 h2 {
   margin: 0 0 18px;
@@ -175,6 +176,7 @@ h2 .note {
 .abstract summary:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .abstract summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .abstract p {
+  max-width: 44rem;   /* keep the line length comfortable now that the column is wider */
   margin: 8px 0 0;
   padding-left: 1.1em;
   border-left: 1px solid var(--rule);
