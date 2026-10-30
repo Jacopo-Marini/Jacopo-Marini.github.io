@@ -2,9 +2,9 @@
 
 Personal academic site. Plain HTML + CSS, no build step.
 
-- `index.html`: all content (bio, research). Commented-out blocks are ready-made slots for the email/CV row, a portrait, and paper entries.
+- `index.html`: all content (bio, research). Commented-out blocks are ready-made slots for extra contact links, a portrait, and paper links.
 - `style.css`: the whole design. Colors and fonts are the variables at the top.
-- `assets/`: put `portrait.jpg`, `cv.pdf`, and paper PDFs here.
+- `assets/`: `Jacopo_Marini_CV.pdf` (replace the file, keeping the name, to update the CV), plus `portrait.jpg` and paper PDFs when available.
 
 Pushing to `main` publishes to the `gh-pages` branch via `.github/workflows/deploy.yml`.
 
