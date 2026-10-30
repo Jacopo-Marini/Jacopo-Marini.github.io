@@ -21,6 +21,9 @@ jobs:
           mkdir _site
           rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='README.md' --exclude='.gitignore' ./ _site/
           touch _site/.nojekyll
+      - name: Version the stylesheet link
+        # Pages lets browsers cache files for 10 minutes; a new ?v= makes them fetch the new CSS with the new HTML
+        run: find _site -name '*.html' -exec sed -i "s#href=\"/style.css\"#href=\"/style.css?v=${GITHUB_SHA::7}\"#" {} +
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
