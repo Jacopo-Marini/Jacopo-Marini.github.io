@@ -3,8 +3,9 @@
 :root {
   color-scheme: light;
   --accent: #6e122a;          /* deep bordeaux: links and the current page only */
-  --w-body: 450;              /* Newsreader is variable: any value from 400 to 600 works */
-  --w-strong: 580;            /* titles and subheads */
+  --w-body: 485;              /* Newsreader is variable: any value from 400 to 700 works */
+  --w-strong: 625;            /* titles and subheads */
+  --edge: 20px;               /* space between the page edge and the top/bottom rules */
   --ink: #000;
   --muted: #555;
   --rule: #dcdcdc;
@@ -16,6 +17,9 @@
 html { scroll-behavior: smooth; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: "Newsreader", Georgia, "Times New Roman", serif;
   font-optical-sizing: auto;
@@ -30,10 +34,27 @@ body {
 
 ::selection { background: var(--accent); color: var(--paper); }
 
-/* Page frame: one centered column of about 800px */
+/* Double rule at the very top and bottom of every page: a 1px hairline, a 4px gap
+   (about 1 mm) and a 3px bar (about 2 pt), mirrored at the bottom. Being part of
+   the page flow, they push the content down and keep it clear of the rule. */
+body::before,
+body::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;   /* the global rule doesn't reach pseudo-elements */
+  flex: none;
+  height: 8px;
+  margin: 0 var(--edge);
+  border: 0 solid var(--accent);
+}
+body::before { margin-top: var(--edge); border-top-width: 1px; border-bottom-width: 3px; }
+body::after  { margin-bottom: var(--edge); border-top-width: 3px; border-bottom-width: 1px; }
+
+/* Page frame: one centered column of about 800px, filling the space between the rules */
 .page {
+  flex: 1;
+  width: 100%;
   max-width: 864px;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 0 32px 112px;
 }
@@ -118,7 +139,7 @@ h2:not(:first-child) { margin-top: 52px; }
 h2 .note { margin-left: 6px; font-size: 17px; font-weight: var(--w-body); font-style: italic; color: var(--muted); }
 
 .paper { margin-bottom: 24px; }
-.paper .title { font-weight: var(--w-strong); line-height: 1.4; }
+.paper .title { font-weight: var(--w-strong); line-height: 1.4; text-wrap: balance; }
 .paper .meta { font-style: italic; }
 .paper .line {
   position: relative;
@@ -129,6 +150,7 @@ h2 .note { margin-left: 6px; font-size: 17px; font-weight: var(--w-body); font-s
 .paper .line::before { content: "\2014"; position: absolute; left: 0; }
 
 @media (max-width: 620px) {
+  :root { --edge: 14px; }
   body { font-size: 18px; }
   .page { padding: 0 22px 80px; }
   main { padding-top: 48px; }
