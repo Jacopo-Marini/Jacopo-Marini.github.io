@@ -134,7 +134,7 @@ h2 {
   font-size: 22px;
   font-weight: var(--w-strong);
   line-height: 1.3;
-  color: var(--accent);
+  color: var(--ink);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.22em;
