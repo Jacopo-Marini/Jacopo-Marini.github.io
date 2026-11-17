@@ -88,8 +88,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 56px;
+  gap: 10px 56px;
   margin-top: 22px;
   font-size: 15px;
   letter-spacing: 0.16em;
@@ -97,6 +98,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 }
 .site-nav a {
   padding-bottom: 2px;
+  white-space: nowrap;
   color: var(--ink);
   border-bottom: 1px solid transparent;
 }
@@ -189,7 +191,7 @@ h2 .note {
   main { padding-top: 48px; }
   .site-header { padding-top: 40px; }
   .site-name { font-size: 27px; letter-spacing: 0.06em; }
-  .site-nav { gap: 30px; margin-top: 16px; font-size: 13px; letter-spacing: 0.14em; }
+  .site-nav { gap: 8px 16px; margin-top: 16px; font-size: 12px; letter-spacing: 0.1em; }
   .home:has(.portrait) { grid-template-columns: minmax(0, 1fr); }
   .portrait { max-width: 300px; margin: 0 auto; }
   h2 { font-size: 20px; }
